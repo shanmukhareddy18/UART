@@ -28,7 +28,7 @@ module TX #(parameter data_w=5)(b_clk,sys_rst,xmitH,xmit_dataH,uart_xmit_dataH,x
    reg [3:0]cnt_bits; 
    parameter idle =2'd0, start=2'd1, data=2'd2, stop=2'd3;
    reg [1:0]pst,nst;
-   always@(posedge b_clk)
+   always@(posedge b_clk or sys_rst)
    begin
      if(sys_rst)
           begin
