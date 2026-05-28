@@ -98,7 +98,7 @@ module RX #(parameter data_w=6)(b_clk,sys_rst,uart_REC_dataH,rec_readyH,rec_data
                begin
                  if(cnt_cycles==5 && ff2==1) begin
                     nst=idle;
-                    rec_dataH<=temp_data;
+                    rec_dataH=temp_data;
                   end
                 
                   else begin
